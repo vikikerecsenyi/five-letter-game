@@ -1,0 +1,30 @@
+﻿<Window x:Class="otbetus.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:otbetus"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Label FontSize="24" FontFamily="Segoe Print" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="305,0,300,0">Ötbetűs játék
+        </Label>
+        <TextBox x:Name="jatekrol" BorderBrush="Black"  IsEnabled="False" Text="Találd ki melyik szóra gondoltam!&#xD;&#xA;&#xD;&#xA;Kigondoltam egy 5 betűből álló magyar szót.&#xD;&#xA;A cél, hogy kitaláld ezt a szót!&#xD;&#xA;Csak létező magyar szavakkal tippelhetsz, viszont azokkal bármennyit.&#xD;&#xA;A tipped után megmondom, hogy&#xD;&#xA;hány betű volt jó helyen, de azt nem hogy melyik!" TextAlignment="Center" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="170,97,135,0" Padding="0,10" Width="475" HorizontalContentAlignment="Center" HorizontalScrollBarVisibility="Disabled" Height="160" Visibility="Hidden"/>
+        <Button x:Name="start" Margin="340,300,315,60" Content="Start" FontSize="14" HorizontalAlignment="Center" Width="127" VerticalAlignment="Center" Height="41" Click="start_Click" Visibility="Hidden"/>
+        <Label x:Name="tippszoveg" Margin="63,113,617,0" HorizontalAlignment="Center" Width="112" VerticalAlignment="Top" Visibility="Hidden">Add meg a tipped:</Label>
+        <TextBox x:Name="tipp" Margin="174,115,460,260" BorderBrush="Black" Width="150" Height="34" TextChanged="ellenoriz" Visibility="Hidden"  />
+        <Button x:Name="tippbutton" Margin="200,185,490,190" HorizontalAlignment="Center" Width="86" VerticalAlignment="Center" Height="32" IsEnabled="False" Click="tippbutton_Click" Visibility="Hidden" IsDefault="True">Tipp</Button>
+        <Label x:Name="label" Margin="453,60,243,320.567" Visibility="Hidden">Eddigi tippeid</Label>
+        <ListBox x:Name="list" HorizontalAlignment="Left" Height="253" Margin="453,97,0,0" VerticalAlignment="Top" Width="254" Visibility="Hidden"/>
+        <Label x:Name="label1" Margin="187,144,442,0" RenderTransformOrigin="0.464,0.102" HorizontalAlignment="Center" VerticalAlignment="Top" Height="32" Width="163" FontSize="10"></Label>
+        <Label x:Name="label2" Margin="320,68,335,308" FontSize="16">Kitaláltad a szót!</Label>
+        <Label x:Name="label3" Margin="277,116,285,262" Content="Szeretnél még egyet játszani?" FontSize="16" RenderTransformOrigin="0.498,0.747"></Label>
+        <Button x:Name="uj" Margin="226,206,464,162" Click="uj_Click">Új</Button>
+        <Button x:Name="kilepes" Margin="453,206,237,162" Content="Kilépés" Click="kilepes_Click"/>
+        <Button x:Name="feladom" Content="Feladom" HorizontalAlignment="Left" Margin="10,370,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.347,1.299" Height="31" Visibility="Hidden" Click="feladom_Click"/>
+        <Label x:Name="label4" Content="" HorizontalAlignment="Left" Margin="277,65,0,0" VerticalAlignment="Top" Width="230" Height="32" FontSize="16" RenderTransformOrigin="0.537,0.47"/>
+
+
+    </Grid>
+</Window>
